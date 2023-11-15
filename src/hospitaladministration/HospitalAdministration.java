@@ -14,7 +14,11 @@ public class HospitalAdministration {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Patient p1 = new Patient("Sam", "15/11/23", "O+");
+        Patient p2 = new Patient("Lexie", "27/11/21", "A-");
+        
+        System.out.println(p1.getPatientID());
+        System.out.println(p2.getPatientID());
     }
     
 }

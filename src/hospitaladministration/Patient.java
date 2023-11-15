@@ -20,13 +20,18 @@ public class Patient {
     private String birthDate;
     private String bloodType;
     private int patientID;
+    // Static means it is a class variable
+    // It is shared by ALL the objects of this class
+    // We use this to auto generate the patient ids - will increment
+    // with each patient
     private static int currentID = 1;
 
-    public Patient(String name, String birthDate, String bloodType, int patientID) {
+    public Patient(String name, String birthDate, String bloodType) {
         this.name = name;
         this.birthDate = birthDate;
         this.bloodType = bloodType;
-        this.patientID = patientID;
+        this.patientID = currentID;
+        currentID++;
     }
 
     public String getName() {
