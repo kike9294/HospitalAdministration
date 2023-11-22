@@ -35,6 +35,18 @@ public class Patient {
         currentID++;
     }
 
+    public Patient(String name, String birthDate, String bloodType, int patientID) {
+        this.name = name;
+        this.birthDate = birthDate;
+        this.bloodType = bloodType;
+        this.patientID = patientID;
+        if (currentID <= patientID) {
+            currentID = patientID + 1;
+        }
+    }
+    
+    
+
     public static int getCurrentID() {
         return currentID;
     }
